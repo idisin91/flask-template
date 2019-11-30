@@ -1,0 +1,39 @@
+swagger: '2.0'
+info:
+  description: A Simple IP Address API
+  title: docs
+  version: v1
+host: 192.168.1.1
+schemes:
+  - http
+basePath: /api/v1
+tags:
+  - name: client
+paths:
+  /client/<name>/:
+    get:
+      tags: 
+      - client
+      summary: Get client id by name
+      parameters:
+        - in: query
+          name: format
+          type: string
+          description: 'The format to return the response in, i.e. json.'
+          default: json
+      responses:
+        '200':
+          description: Success response
+    post:
+      tags: 
+      - client
+      summary: Set client name client id by name
+      parameters:
+        - in: query
+          name: format
+          type: string
+          description: 'The format to return the response in, i.e. json.'
+          default: json
+      responses:
+        '200':
+          description: Success response
